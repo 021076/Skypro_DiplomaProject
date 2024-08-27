@@ -20,7 +20,7 @@ class AnswersSerializer(serializers.ModelSerializer):
 
 
 class TestsSerializer(serializers.ModelSerializer):
-    """ Cериализатор для контроллеров Tests """
+    """ Сериализатор для контроллеров Tests """
 
     class Meta:
         model = Tests
