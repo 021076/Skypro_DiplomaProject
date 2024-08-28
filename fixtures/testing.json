@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "model": "testing.tests",
+    "pk": 1,
+    "fields": {
+      "topic": 1,
+      "description": "Тест 1"
+    }
+  },
+  {
+    "model": "testing.questions",
+    "pk": 1,
+    "fields": {
+      "test": 1,
+      "question": "Какой-то вопрос 1"
+    }
+  },
+  {
+    "model": "testing.questions",
+    "pk": 2,
+    "fields": {
+      "test": 1,
+      "question": "Какой-то вопрос 2"
+    }
+  },
+  {
+    "model": "testing.answers",
+    "pk": 1,
+    "fields": {
+      "question": 1,
+      "answer": "ответ 1"
+    }
+  },
+  {
+    "model": "testing.answers",
+    "pk": 2,
+    "fields": {
+      "question": 2,
+      "answer": "да"
+    }
+  }
+]
