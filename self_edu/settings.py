@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'drf_spectacular',
     'corsheaders',
+    'nested_admin',
     #
     'users.apps.UsersConfig',
     'materials.apps.MaterialsConfig',

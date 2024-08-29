@@ -35,7 +35,10 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    # админки
     path('admin/', admin.site.urls),
+    path('_nested_admin/', include('nested_admin.urls')),
+    # приложения
     path('', include('users.urls', namespace='users')),
     path('', include('materials.urls', namespace='materials')),
     path('', include('testing.urls', namespace='testing')),
@@ -48,5 +51,4 @@ urlpatterns = [
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='docs'),
-
-]
+    ]
