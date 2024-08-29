@@ -2,7 +2,7 @@
 
 Дипломная работа https://skyengpublic.notion.site/OB1-54af2fdc37184006970b4a842c2f7db7?pvs=25
 Код работы: OB1
-Тема: "Платформа для самообучения студентов". 
+Тема: "Платформа для самообучения студентов".
 Backend-часть.
 Технологии: Django, PostgreSQL, DRF, JWT, Viewset/Generic, Permissions, Tests, Readme, PEP8, ORM, Git, CORS, OpenAPI
 Docs, Serialiers.
@@ -15,7 +15,9 @@ Redoc - http://127.0.0.1:8000/redoc/
 пользователей и ролями. Для реализации проекта использовался фреймворк Django Rest Framework (DRF).
 
 Инструкция по развертыванию проекта
-- проект размещен на хостинге для хранения проектов GitHub, ссылка для клонирования https://github.com/021076/Skypro_DiplomaProject .
+
+- проект размещен на хостинге для хранения проектов GitHub, ссылка для
+  клонирования https://github.com/021076/Skypro_DiplomaProject .
 - создать и активировать виртуальное окружение: python3 -m venv venv env/scripts/activate.
 - установить зависимости из файла requirements.txt: pip install -r requirements.txt
 - создать базу данных
