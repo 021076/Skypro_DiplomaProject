@@ -6,18 +6,11 @@ from materials.validators import VideoValidator
 class CourseSerializer(serializers.ModelSerializer):
     """Сериализатор для работы с контроллером создания Учебного курса"""
     topics = serializers.SerializerMethodField()
-    # subscriptions = serializers.SerializerMethodField()
 
     def get_topics(self, course):
         topics_count = Topic.objects.filter(course=course).count()
         topics_list = [topic.title for topic in Topic.objects.filter(course=course)]
         return {"topics_count": topics_count, "topics_list": topics_list}
-
-    # def get_subscriptions(self, course):
-    #     request = self.context.get('request')
-    #     if request and request.user.is_authenticated:
-    #         return Subscription.objects.filter(user=request.user, course=course).exists()
-    #     return False
 
     class Meta:
         model = Course
