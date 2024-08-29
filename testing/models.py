@@ -23,7 +23,7 @@ class Question(models.Model):
     """ Модель вопросов к тестам """
     objects = None
     test = models.ForeignKey(Test, verbose_name='Тест', on_delete=models.CASCADE, **NULLABLE)
-    question = models.CharField(max_length=50, verbose_name='Вопрос', **NULLABLE)
+    question = models.CharField(max_length=200, verbose_name='Вопрос', **NULLABLE)
 
     def __str__(self):
         return f'{self.question}'
@@ -38,7 +38,7 @@ class Answer(models.Model):
     """ Модель ответов к вопросам """
     objects = None
     question = models.ForeignKey(Question, verbose_name='Вопрос', on_delete=models.CASCADE, **NULLABLE)
-    answer = models.CharField(max_length=40, verbose_name='Ответ', **NULLABLE)
+    answer = models.CharField(max_length=100, verbose_name='Ответ', **NULLABLE)
     is_correct = models.BooleanField(default=False, verbose_name="Правильный ответ")
 
     def __str__(self):
@@ -47,3 +47,4 @@ class Answer(models.Model):
     class Meta:
         verbose_name = 'Ответ'
         verbose_name_plural = 'Ответы'
+
