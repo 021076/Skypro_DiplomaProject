@@ -1,27 +1,27 @@
 from django.contrib import admin
-from testing.models import Tests, Questions, Answers
+from testing.models import Test, Question, Answer
 import nested_admin
 
 
 # Мульти-админка с вложенными строками
-class AnswersInline(nested_admin.NestedTabularInline):
-    model = Answers
+class AnswerInline(nested_admin.NestedTabularInline):
+    model = Answer
     extra = 0
 
 
-class QuestionsInline(nested_admin.NestedTabularInline):
-    model = Questions
-    inlines = [AnswersInline]
+class QuestionInline(nested_admin.NestedTabularInline):
+    model = Question
+    inlines = [AnswerInline]
     extra = 0
 
 
-class TestsAdmin(nested_admin.NestedModelAdmin):
-    model = Tests
-    inlines = [QuestionsInline]
+class TestAdmin(nested_admin.NestedModelAdmin):
+    model = Test
+    inlines = [QuestionInline]
     extra = 0
 
 
-admin.site.register(Tests, TestsAdmin)
+admin.site.register(Test, TestAdmin)
 
 # Обычная админка
 # @admin.register(Tests)

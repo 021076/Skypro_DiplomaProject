@@ -1,27 +1,26 @@
 from rest_framework import serializers
+from testing.models import Question, Answer, Test
 
-from testing.models import Questions, Answers, Tests
 
-
-class QuestionsSerializer(serializers.ModelSerializer):
+class QuestionSerializer(serializers.ModelSerializer):
     """ Cериализатор для контроллеров Questions """
 
     class Meta:
-        model = Questions
+        model = Question
         fields = '__all__'
 
 
-class AnswersSerializer(serializers.ModelSerializer):
+class AnswerSerializer(serializers.ModelSerializer):
     """ Cериализатор для контроллеров Answers """
 
     class Meta:
-        model = Answers
+        model = Answer
         fields = ('answer',)
 
 
-class TestsSerializer(serializers.ModelSerializer):
+class TestSerializer(serializers.ModelSerializer):
     """ Сериализатор для контроллеров Tests """
 
     class Meta:
-        model = Tests
+        model = Test
         fields = '__all__'
