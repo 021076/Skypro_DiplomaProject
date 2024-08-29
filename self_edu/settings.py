@@ -182,17 +182,18 @@ CSRF_TRUSTED_ORIGINS = [
     'https://read-and-write.example.com',
 ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = os.getenv('HOST')
-EMAIL_PORT = os.getenv('HOST_PORT')
-EMAIL_USE_TLS = os.getenv('HOST_TLS')
-EMAIL_USE_SSL = os.getenv('HOST_SSL')
-EMAIL_HOST_USER = os.getenv('HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('HOST_PASSWORD')
-EMAIL_SERVER = EMAIL_HOST_USER
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-EMAIL_ADMIN = EMAIL_HOST_USER
-
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-TELEGRAM_URL = os.getenv("TELEGRAM_URL")
+# Для будущего расширения функционала, отправка по почте, в телеграмм
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = os.getenv('HOST')
+# EMAIL_PORT = os.getenv('HOST_PORT')
+# EMAIL_USE_TLS = os.getenv('HOST_TLS')
+# EMAIL_USE_SSL = os.getenv('HOST_SSL')
+# EMAIL_HOST_USER = os.getenv('HOST_USER')
+# EMAIL_HOST_PASSWORD = os.getenv('HOST_PASSWORD')
+# EMAIL_SERVER = EMAIL_HOST_USER
+# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+# EMAIL_ADMIN = EMAIL_HOST_USER
+#
+# TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+# TELEGRAM_URL = os.getenv("TELEGRAM_URL")
